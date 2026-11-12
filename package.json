@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "version-packages": "changeset version && pnpm install --lockfile-only",
-    "release:approve": "./scripts/approve-release.sh",
+    "release:approve": "node scripts/approve-release.mjs",
     "build-packages": "turbo run build --filter './packages/**' --filter '!./packages/swc-plugin-extractor'"
   },
   "devDependencies": {
